@@ -10,6 +10,8 @@
 		<meta name="author" content="" />
 
 		<title>NASA</title>
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -41,22 +43,22 @@
 							<a
 								class="nav-link"
 								aria-current="page"
-								href="index.html"
+								href="index.php"
 								>Home</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="trabalhos.html"
+							<a class="nav-link" href="trabalhos.php"
 								>Trabalhos Desenvolvidos</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="missoes.html"
+							<a class="nav-link" href="missoes.php"
 								>Missões espaciais</a
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="naves.html"
+							<a class="nav-link active" href="naves.php"
 								>Naves Espaciais</a
 							>
 						</li>
@@ -112,5 +114,17 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
+
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js')
+				.then(function(registration) {
+					console.log('Registration successful, scope is:', registration.scope);
+				})
+				.catch(function(error) {
+					console.log('Service worker registration failed, error:', error);
+				});
+			}
+		</script>
 	</body>
 </html>
