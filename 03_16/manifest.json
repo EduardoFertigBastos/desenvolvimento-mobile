@@ -1,0 +1,16 @@
+{
+    "name": "UNIDAVI",
+    "short_name": "UNIDAVI",
+    "theme_color": "#2a0044",
+    "background_color": "#2a0044",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": ".",  
+    "icons": [
+      {
+        "src": "assets/logo.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ]
+  }
