@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
                             resultValue = (doubleResult / doubleValue);
                             break;
                         case ('%'):
-                            resultValue = (doubleResult / doubleValue * 100);
+                            resultValue = (doubleValue / doubleResult * 100);
                             break;
                         default:
                             resultValue = doubleValue;
