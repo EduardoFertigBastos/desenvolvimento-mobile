@@ -10,25 +10,26 @@ public class Pais implements Serializable {
     private String sigla;
 
     public Long getId() {
-        return this.id;
+        return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
 
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
     public String getSigla() {
-        return this.sigla;
+        return sigla;
     }
+
     public void setSigla(String sigla) {
         this.sigla = sigla;
     }
-
-
 }

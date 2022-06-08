@@ -26,7 +26,7 @@ public class FormularioCidadeHelper {
     public Cidade pegaDoFormulario() {
 
         registro.setDescricao(descricao.getEditableText().toString());
-        registro.setEstado(estado_id.getEditableText());
+        registro.setEstado_id(Long.valueOf(estado_id.getText().toString()));
 
         return registro;
     }
@@ -35,7 +35,7 @@ public class FormularioCidadeHelper {
         this.registro = pRegistro;
 
         descricao.setText(pRegistro.getDescricao());
-        estado_id.setText(pRegistro.getEstado().toString());
+        estado_id.setText(pRegistro.getEstado_id().toString());
 
     }
 

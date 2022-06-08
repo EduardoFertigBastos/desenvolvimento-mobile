@@ -25,7 +25,7 @@ public class FormularioEstadoHelper {
 
         registro.setDescricao(descricao.getEditableText().toString());
         registro.setSigla(sigla.getEditableText().toString());
-        registro.setPais(pais_id.getEditableText().toString());
+        registro.setPais_id(Long.valueOf(pais_id.getText().toString()));
 
         return registro;
     }
@@ -35,7 +35,7 @@ public class FormularioEstadoHelper {
 
         descricao.setText(pRegistro.getDescricao());
         sigla.setText(pRegistro.getSigla());
-        pais_id.setText(pRegistro.getPais().toString());
+        pais_id.setText(pRegistro.getPais_id().toString());
     }
 
 

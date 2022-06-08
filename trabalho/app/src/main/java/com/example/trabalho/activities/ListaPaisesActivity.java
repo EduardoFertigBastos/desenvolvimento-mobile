@@ -19,7 +19,7 @@ import com.example.trabalho.R;
 import com.example.trabalho.adapters.ListaPaisesAdapter;
 import com.example.trabalho.dao.PaisDAO;
 import com.example.trabalho.model.Pais;
-import com.example.agoravai.extras.Extras;
+import com.example.trabalho.extras.Extras;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class ListaPaisesActivity extends Activity {
                                     int position, long id) {
 
                 Intent edicao = new Intent(ListaPaisesActivity.this,
-                        FormularioActivity.class);
+                        FormularioPaisesActivity.class);
 
                 Pais regSelecionado = (Pais) listaRegistros
                         .getItemAtPosition(position);
@@ -89,7 +89,7 @@ public class ListaPaisesActivity extends Activity {
             case R.id.menu_novo:
 
                 Intent intent = new Intent(ListaPaisesActivity.this,
-                        FormularioActivity.class);
+                        FormularioPaisesActivity.class);
 
                 startActivity(intent);
 

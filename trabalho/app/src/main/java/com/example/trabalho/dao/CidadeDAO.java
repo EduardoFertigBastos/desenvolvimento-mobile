@@ -45,7 +45,7 @@ public class CidadeDAO extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put("descricao", cidade.getDescricao());
-        values.put("estado_id", cidade.getEstado());
+        values.put("estado_id", cidade.getEstado_id());
 
         getWritableDatabase().insert(TABELA, null, values);
     }
@@ -71,7 +71,7 @@ public class CidadeDAO extends SQLiteOpenHelper {
 
             cidade.setId(c.getLong(0));
             cidade.setDescricao(c.getString(1));
-            cidade.setEstado(c.getLong(2));
+            cidade.setEstado_id(c.getLong(2));
 
             cidades.add(cidade);
         }
@@ -92,7 +92,7 @@ public class CidadeDAO extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put("descricao", cidade.getDescricao());
-        values.put("estado_id", cidade.getEstado());
+        values.put("estado_id", cidade.getEstado_id());
 
         String[] args = {cidade.getId().toString()};
         getWritableDatabase().update(TABELA, values, "id=?", args );

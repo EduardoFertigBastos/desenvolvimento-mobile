@@ -50,10 +50,10 @@ public class ListaCidadesAdapter extends BaseAdapter {
         Cidade cidade = cidades.get(position);
 
         TextView descricao = (TextView) view.findViewById(R.id.descricao);
-        TextView estado = (TextView) view.findViewById(R.id.estado);
+        TextView estado = (TextView) view.findViewById(R.id.estado_id);
 
         descricao.setText(cidade.getDescricao());
-        estado.setText(cidade.getEstado().toString());
+        estado.setText(cidade.getEstado_id().toString());
 
         return view;
     }

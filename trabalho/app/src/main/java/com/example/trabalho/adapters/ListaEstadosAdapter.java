@@ -55,7 +55,7 @@ public class ListaEstadosAdapter extends BaseAdapter {
 
         descricao.setText(estado.getDescricao());
         sigla.setText(estado.getSigla());
-        pais.setText(estado.getPais().toString());
+        pais.setText(estado.getPais_id().toString());
 
         return view;
     }

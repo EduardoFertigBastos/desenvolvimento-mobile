@@ -46,7 +46,7 @@ public class EstadoDAO extends SQLiteOpenHelper {
 
         values.put("descricao", estado.getDescricao());
         values.put("sigla", estado.getSigla());
-        values.put("pais_id", estado.getPais());
+        values.put("pais_id", estado.getPais_id());
 
         getWritableDatabase().insert(TABELA, null, values);
     }
@@ -73,7 +73,7 @@ public class EstadoDAO extends SQLiteOpenHelper {
             estado.setId(c.getLong(0));
             estado.setDescricao(c.getString(1));
             estado.setSigla(c.getString(2));
-            estado.setPais(c.getLong(3));
+            estado.setPais_id(c.getLong(3));
 
             estados.add(estado);
         }
@@ -95,7 +95,7 @@ public class EstadoDAO extends SQLiteOpenHelper {
 
         values.put("descricao", estado.getDescricao());
         values.put("sigla", estado.getSigla());
-        values.put("pais_id", estado.getPais());
+        values.put("pais_id", estado.getPais_id());
 
         String[] args = {estado.getId().toString()};
         getWritableDatabase().update(TABELA, values, "id=?", args );

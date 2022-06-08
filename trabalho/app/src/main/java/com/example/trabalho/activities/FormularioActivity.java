@@ -2,9 +2,9 @@
 
 import java.io.File;
 
-import com.example.agoravai.R;
-import com.example.agoravai.dao.PaisDAO;
-import com.example.agoravai.helpers.FormularioHelper;
+import com.example.trabalho.R;
+import com.example.trabalho.dao.PaisDAO;
+import com.example.trabalho.helpers.FormularioHelper;
 
 import android.app.Activity;
 import android.content.Intent;

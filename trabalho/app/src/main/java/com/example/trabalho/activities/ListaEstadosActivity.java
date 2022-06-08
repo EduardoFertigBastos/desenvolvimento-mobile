@@ -41,7 +41,7 @@ public class ListaEstadosActivity extends Activity {
                                     int position, long id) {
 
                 Intent edicao = new Intent(ListaEstadosActivity.this,
-                        FormularioActivity.class);
+                        FormularioEstadosActivity.class);
 
                 Estado regSelecionado = (Estado) listaRegistros
                         .getItemAtPosition(position);
@@ -87,7 +87,7 @@ public class ListaEstadosActivity extends Activity {
             case R.id.menu_novo:
 
                 Intent intent = new Intent(ListaEstadosActivity.this,
-                        FormularioActivity.class);
+                        FormularioEstadosActivity.class);
 
                 startActivity(intent);
 

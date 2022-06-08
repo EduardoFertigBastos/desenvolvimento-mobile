@@ -12,24 +12,26 @@ public class Cidade implements Serializable {
     private String descricao;
 
     public Long getId() {
-        return this.id;
+        return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
 
-    public Long getEstado() {
-        return this.estado_id;
+    public Long getEstado_id() {
+        return estado_id;
     }
-    public void setEstado(Editable id) {
+
+    public void setEstado_id(Long estado_id) {
         this.estado_id = estado_id;
     }
 
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
 }
