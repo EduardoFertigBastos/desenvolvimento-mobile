@@ -21,10 +21,10 @@ public class FormularioCidadesActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pais_activity_formulario);
+        setContentView(R.layout.cidade_activity_formulario);
 
         Intent intent = getIntent();
-        final Cidade registroParaSerAlterado = (Cidade) intent.getSerializableExtra("estadoSelecionado");
+        final Cidade registroParaSerAlterado = (Cidade) intent.getSerializableExtra("cidadeSelecionado");
 
         this.helper = new FormularioCidadeHelper(this);
 

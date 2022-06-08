@@ -21,7 +21,7 @@ public class FormularioEstadosActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pais_activity_formulario);
+        setContentView(R.layout.estado_activity_formulario);
 
         Intent intent = getIntent();
         final Estado registroParaSerAlterado = (Estado) intent.getSerializableExtra("estadoSelecionado");

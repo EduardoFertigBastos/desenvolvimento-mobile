@@ -21,14 +21,14 @@
         <activity android:name=".activities.ListaEstadosActivity"
             android:label="@string/app_name"/>
 
+        <activity android:name=".activities.FormularioCidadesActivity"
+            android:label="@string/app_name"/>
+
         <activity android:name=".activities.FormularioPaisesActivity"
             android:label="@string/app_name"/>
 
-        <activity android:name=".activities.ListaPaisesActivity"
-            android:label="@string/app_name"/>
-
         <activity
-            android:name=".activities.FormularioCidadesActivity"
+            android:name=".activities.ListaPaisesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
