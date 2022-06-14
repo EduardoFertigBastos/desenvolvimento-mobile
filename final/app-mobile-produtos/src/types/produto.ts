@@ -1,4 +1,4 @@
-export interface ProdutoData {
+export interface PaisData {
   id: string;
   nome: string;
   descricao: string;

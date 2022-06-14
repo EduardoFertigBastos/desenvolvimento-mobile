@@ -6,18 +6,18 @@ import {
   View
 } from 'react-native';
 import { Feather } from '@expo/vector-icons'; 
-import { ProdutoData } from '../types/produto';
+import { PaisData } from '../types/pais';
 
-interface ProdutoCardProps {
-  item: ProdutoData;
+interface PaisCardProps {
+  item: PaisData;
   onDelete: (id: string) => Promise<void>
-  onEdit: (produto: ProdutoData) => void
+  onEdit: (pais: PaisData) => void
 }
 
-export default function ProdutoCard({ item, onDelete, onEdit }: ProdutoCardProps) {
+export default function PaisCard({ item, onDelete, onEdit }: PaisCardProps) {
   return (
     <View style={styles.list}>
-      <Text style={styles.nameProduto}>
+      <Text style={styles.namePais}>
         {item.nome}
       </Text>
 
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  nameProduto: {
+  namePais: {
     color: '#fff',
     fontSize: 18,
   },

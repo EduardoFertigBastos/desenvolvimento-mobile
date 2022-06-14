@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "appmobileprodutos.app"
-               BlueprintName = "appmobileprodutos"
-               ReferencedContainer = "container:appmobileprodutos.xcodeproj">
+               BuildableName = "appmobilepaises.app"
+               BlueprintName = "appmobilepaises"
+               ReferencedContainer = "container:appmobilepaises.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "appmobileprodutosTests.xctest"
-               BlueprintName = "appmobileprodutosTests"
-               ReferencedContainer = "container:appmobileprodutos.xcodeproj">
+               BuildableName = "appmobilepaisesTests.xctest"
+               BlueprintName = "appmobilepaisesTests"
+               ReferencedContainer = "container:appmobilepaises.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "appmobileprodutos.app"
-            BlueprintName = "appmobileprodutos"
-            ReferencedContainer = "container:appmobileprodutos.xcodeproj">
+            BuildableName = "appmobilepaises.app"
+            BlueprintName = "appmobilepaises"
+            ReferencedContainer = "container:appmobilepaises.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "appmobileprodutos.app"
-            BlueprintName = "appmobileprodutos"
-            ReferencedContainer = "container:appmobileprodutos.xcodeproj">
+            BuildableName = "appmobilepaises.app"
+            BlueprintName = "appmobilepaises"
+            ReferencedContainer = "container:appmobilepaises.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

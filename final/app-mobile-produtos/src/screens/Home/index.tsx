@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 
 import Button from '../../components/Button';
-import ProdutoCard from '../../components/ProdutoCard';
-import { ProdutoData } from '../../types/produto';
+import PaisCard from '../../components/PaisCard';
+import { PaisData } from '../../types/pais';
 import api from '../../services/api';
 
 export default function Home(): ReactElement {
@@ -19,24 +19,24 @@ export default function Home(): ReactElement {
     const [descricao, setDescricao] = useState('');
     const [preco, setPreco] = useState('');
     const [numero, setNumero] = useState('');
-    const [produtos, setProdutos] = useState<ProdutoData[]>([]);
+    const [paises, setPaises] = useState<PaisData[]>([]);
 
-    const loadProdutos = async () => {
-        const response = await api.get("produto");
-        setProdutos(response.data)
+    const loadPaises = async () => {
+        const response = await api.get("pais");
+        setPaises(response.data)
     }
     
     useEffect(() => {
-        loadProdutos()
-    }, [loadProdutos])
+        loadPaises()
+    }, [loadPaises])
 
     const handleSave = async () => {
         if(id) {
-            await api.patch(`produto/${id}`, { nome, descricao, preco });
+            await api.patch(`pais/${id}`, { nome, descricao, preco });
         } else {
-            await api.post("produto", { nome, descricao, preco });
+            await api.post("pais", { nome, descricao, preco });
         }
-        loadProdutos()
+        loadPaises()
         setId('')
         setNome('')
         setDescricao('')
@@ -44,21 +44,21 @@ export default function Home(): ReactElement {
     }
 
     const handleDelete = async (id: string) => {
-        await api.delete(`produto/${id}`);
-        loadProdutos();
+        await api.delete(`pais/${id}`);
+        loadPaises();
     }
 
-    const handleEdit = (produto: ProdutoData) => {
-        setId(produto.id)
-        setNome(produto.nome)
-        setDescricao(produto.descricao)
-        setPreco(`${produto.preco}`)
+    const handleEdit = (pais: PaisData) => {
+        setId(pais.id)
+        setNome(pais.nome)
+        setDescricao(pais.descricao)
+        setPreco(`${pais.preco}`)
     }
 
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bem-vindo, Marcondes</Text>
-            <Text style={styles.gretting}>Registro de Produtos</Text>
+            <Text style={styles.gretting}>Registro de Paises</Text>
 
             <View style={styles.areaInput}>
 
@@ -102,17 +102,17 @@ export default function Home(): ReactElement {
                 <Button onPress={handleSave} title="Save" />
                 
             </View>
-            <Text style={[styles.title, { marginVertical: 10 }]}>Produtos Cadastrados</Text>
+            <Text style={[styles.title, { marginVertical: 10 }]}>Paises Cadastrados</Text>
 
             {
-            produtos && (
+            paises && (
                 <FlatList 
-                    data={produtos}
+                    data={paises}
                     keyboardShouldPersistTaps="never"
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}
                     renderItem={({item}) => (
-                        <ProdutoCard 
+                        <PaisCard 
                             item={item} 
                             onDelete={handleDelete} 
                             onEdit={handleEdit} 

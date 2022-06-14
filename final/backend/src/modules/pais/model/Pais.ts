@@ -1,10 +1,9 @@
 import { v4 as uuidV4 } from "uuid";
 
-class Produto {
+class Pais {
   id?: string;
-  nome: string;
   descricao: string;
-  preco: number;
+  sigla: string;
   created_at: Date;
 
   constructor() {
@@ -14,4 +13,4 @@ class Produto {
   }
 }
 
-export { Produto };
+export { Pais };

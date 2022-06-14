@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-mobile-produtos",
-    "slug": "app-mobile-produtos",
+    "name": "app-mobile-paises",
+    "slug": "app-mobile-paises",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"

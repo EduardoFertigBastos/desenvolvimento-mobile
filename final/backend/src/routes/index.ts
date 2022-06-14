@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { produtosRoutes } from "./produto.routes";
+import { paisesRoutes } from "./pais.routes";
 
 const router = Router();
 
-router.use("/produto", produtosRoutes);
+router.use("/pais", paisesRoutes);
 
 export { router };
