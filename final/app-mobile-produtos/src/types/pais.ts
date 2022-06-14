@@ -1,7 +1,6 @@
 export interface PaisData {
   id: string;
-  nome: string;
   descricao: string;
-  preco: number;
+  sigla: string;
   created_at: Date;
 }

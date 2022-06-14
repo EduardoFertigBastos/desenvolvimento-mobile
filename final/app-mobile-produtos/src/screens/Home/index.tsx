@@ -15,10 +15,8 @@ import api from '../../services/api';
 
 export default function Home(): ReactElement {
     const [id, setId] = useState('');
-    const [nome, setNome] = useState('');
     const [descricao, setDescricao] = useState('');
-    const [preco, setPreco] = useState('');
-    const [numero, setNumero] = useState('');
+    const [sigla, setSigla] = useState('');
     const [paises, setPaises] = useState<PaisData[]>([]);
 
     const loadPaises = async () => {
@@ -32,15 +30,15 @@ export default function Home(): ReactElement {
 
     const handleSave = async () => {
         if(id) {
-            await api.patch(`pais/${id}`, { nome, descricao, preco });
+            await api.patch(`pais/${id}`, { descricao, sigla });
         } else {
-            await api.post("pais", { nome, descricao, preco });
+            await api.post("pais", { descricao, sigla });
         }
-        loadPaises()
-        setId('')
-        setNome('')
-        setDescricao('')
-        setPreco('')
+
+        loadPaises();
+        setId('');
+        setDescricao('');
+        setSigla('');
     }
 
     const handleDelete = async (id: string) => {
@@ -49,31 +47,22 @@ export default function Home(): ReactElement {
     }
 
     const handleEdit = (pais: PaisData) => {
-        setId(pais.id)
-        setNome(pais.nome)
-        setDescricao(pais.descricao)
-        setPreco(`${pais.preco}`)
+        setId(pais.id);
+        setDescricao(pais.descricao);
+        setSigla(pais.sigla);
     }
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Bem-vindo, Marcondes</Text>
+            <Text style={styles.title}>When we were young, the future was so bright</Text>
+            <Text style={styles.title}>woooooooah</Text>
+            <Text style={styles.title}>the old neighborhood was so alive</Text>
+            <Text style={styles.title}>woaaaaah ...</Text>
             <Text style={styles.gretting}>Registro de Paises</Text>
 
             <View style={styles.areaInput}>
 
-                <TextInput
-                    value={nome}
-                    placeholder="Nome"
-                    style={{
-                        backgroundColor: '#f1f1f1',
-                        marginTop: 10,
-                        padding: 10,
-                        color: '#333',
-                        fontSize: 16,
-                    }} 
-                    onChangeText={setNome}    
-                />
+                
                 <TextInput
                     value={descricao}
                     style={{
@@ -88,17 +77,18 @@ export default function Home(): ReactElement {
                 />
 
                 <TextInput
-                    value={preco}
+                    value={sigla}
+                    placeholder="Sigla"
                     style={{
                         backgroundColor: '#f1f1f1',
                         marginTop: 10,
                         padding: 10,
                         color: '#333',
                         fontSize: 16,
-                    }}
-                    placeholder="Preço"
-                    onChangeText={setPreco}
+                    }} 
+                    onChangeText={setSigla}    
                 />
+                
                 <Button onPress={handleSave} title="Save" />
                 
             </View>

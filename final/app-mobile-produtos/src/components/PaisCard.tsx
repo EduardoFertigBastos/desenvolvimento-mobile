@@ -18,7 +18,7 @@ export default function PaisCard({ item, onDelete, onEdit }: PaisCardProps) {
   return (
     <View style={styles.list}>
       <Text style={styles.namePais}>
-        {item.nome}
+        {item.descricao}
       </Text>
 
       <View style={styles.actionsArea}>
