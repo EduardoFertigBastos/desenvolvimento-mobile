@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.trabalho.R;
 import com.example.trabalho.adapters.ListaPaisesAdapter;
@@ -35,9 +36,10 @@ public class ListaPaisesActivity extends Activity {
         setContentView(R.layout.pais_activity_main);
 
         listaRegistros = (ListView) findViewById(R.id.lista_paises);
+        TextView addButton = (TextView) findViewById(R.id.addButton);
+
         registerForContextMenu(listaRegistros);
         listaRegistros.setOnItemClickListener(new OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> adapter, View view,
                                     int position, long id) {
@@ -48,10 +50,15 @@ public class ListaPaisesActivity extends Activity {
                 Pais regSelecionado = (Pais) listaRegistros
                         .getItemAtPosition(position);
 
-                edicao.putExtra("registroSelecionado", regSelecionado);
+                edicao.putExtra("paisSelecionado", regSelecionado);
                 startActivity(edicao);
 
             }
+        });
+
+        addButton.setOnClickListener(v -> {
+            Intent intent = new Intent(ListaPaisesActivity.this, FormularioPaisesActivity.class);
+            startActivity(intent);
         });
 
         listaRegistros.setOnItemLongClickListener(new OnItemLongClickListener() {

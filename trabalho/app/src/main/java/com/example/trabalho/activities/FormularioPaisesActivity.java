@@ -35,11 +35,17 @@ public class FormularioPaisesActivity extends Activity {
         this.helper = new FormularioPaisHelper(this);
 
         Button botao = (Button) findViewById(R.id.botao);
+        Button voltar = (Button) findViewById(R.id.voltar);
 
         if (registroParaSerAlterado != null) {
             botao.setText("Alterar");
             helper.colocaNoFormulario(registroParaSerAlterado);
         }
+
+        voltar.setOnClickListener(v -> {
+            Intent intent2 = new Intent(FormularioPaisesActivity.this, ListaPaisesActivity.class);
+            startActivity(intent2);
+        });
 
         botao.setOnClickListener(new OnClickListener() {
             @Override

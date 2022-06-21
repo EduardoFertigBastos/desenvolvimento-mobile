@@ -44,6 +44,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Gravar" />
+
+        <Button
+            android:id="@+id/voltar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Voltar" />
     </LinearLayout>
 
 </ScrollView>
